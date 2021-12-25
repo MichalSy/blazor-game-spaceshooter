@@ -48,6 +48,12 @@ namespace SpaceShooter.Game.Components
         }
 
         [JSInvokable]
+        public void TouchMoveInBlazor(double posX, double posY)
+        {
+            _currentMousePosition = new(Math.Max((int)posX, 0), Math.Max((int)posY, 0));
+        }
+
+        [JSInvokable]
         public void RenderInBlazor(float _)
         {
             Update();
@@ -58,8 +64,6 @@ namespace SpaceShooter.Game.Components
 
         public async void StartGame()
         {
-            await JSRuntime!.InvokeAsync<object>("focusElement", "gamearea");
-
             _isRunning = true;
 
             _views.Clear();
@@ -127,11 +131,6 @@ namespace SpaceShooter.Game.Components
         private void MouseMove(MouseEventArgs mouseEventArgs)
         {
             _currentMousePosition = new(Math.Max((int)mouseEventArgs.OffsetX, 0), Math.Max((int)mouseEventArgs.OffsetY, 0));
-        }
-
-        private void TouchMove(TouchEventArgs touchEventArgs)
-        {
-            _currentMousePosition = new(Math.Max((int)touchEventArgs.ChangedTouches[0].ClientX, 0), Math.Max((int)touchEventArgs.ChangedTouches[0].ClientY, 0));
         }
 
         private DateTime _lastUpdateTimer = DateTime.MinValue;

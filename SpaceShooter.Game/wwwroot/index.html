@@ -32,13 +32,22 @@
             theInstance.invokeMethodAsync('ResizeInBlazor', window.innerWidth, window.innerHeight);
         }
 
-        function focusElement(elementName) {
-            document.getElementById(elementName).focus();
-        }
-
         window.initRenderJS = (instance) => {
             window.theInstance = instance;
             window.addEventListener("resize", resizeCanvasToFitWindow);
+
+            window.addEventListener("touchstart", (event) => {
+                const onTouchMove = (event) => {
+                    theInstance.invokeMethodAsync('TouchMoveInBlazor', event.changedTouches[0].clientX, event.changedTouches[0].clientY);
+                }
+                const onTouchEnd = () => {
+                    event.target.removeEventListener("touchmove", onTouchMove);
+                    event.target.removeEventListener("touchend", onTouchEnd);
+                }
+                event.target.addEventListener("touchmove", onTouchMove);
+                event.target.addEventListener("touchend", onTouchEnd);
+            });
+
             resizeCanvasToFitWindow();
             window.requestAnimationFrame(renderJS);
         };
