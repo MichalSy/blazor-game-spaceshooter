@@ -131,9 +131,9 @@ namespace SpaceShooter.Game.Components
             _currentMousePosition = new(Math.Max((int)mouseEventArgs.OffsetX, 0), Math.Max((int)mouseEventArgs.OffsetY, 0));
         }
 
-        private void TouceMove(TouchEventArgs touchEventArgs)
+        private void TouchMove(TouchEventArgs touchEventArgs)
         {
-            _currentMousePosition = new(Math.Max((int)touchEventArgs.Touches[0].ClientX, 0), Math.Max((int)touchEventArgs.Touches[0].ClientY, 0));
+            _currentMousePosition = new(Math.Max((int)touchEventArgs.ChangedTouches[0].ClientX, 0), Math.Max((int)touchEventArgs.ChangedTouches[0].ClientY, 0));
         }
 
         private DateTime _lastUpdateTimer = DateTime.MinValue;

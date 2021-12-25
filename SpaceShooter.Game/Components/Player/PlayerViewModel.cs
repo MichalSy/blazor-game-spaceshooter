@@ -32,14 +32,14 @@ public class PlayerViewModel : ImageGameObject, IRectCollider
 
     public override void Update()
     {
-        if (Position.X < 0)
+        if (Position.X == -500)
         {
-            Position.X = (WindowSize.Width / 2) - (Size.Width / 2);
-            Position.Y = (WindowSize.Height - 100);
+            MousePosition.MouseX = (WindowSize.Width / 2);
+            MousePosition.MouseY = (WindowSize.Height - 100);
         }
 
         Position.X = MousePosition.MouseX - (Size.Width / 2);
-        Position.Y = MousePosition.MouseY - (Size.Height / 2);
+        Position.Y = MousePosition.MouseY - Size.Height - 40;
 
         _colliderPolygon.Offset(Position.X, Position.Y);
 
