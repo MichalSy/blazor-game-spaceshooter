@@ -4,7 +4,7 @@ using SpaceShooter.Game.Models;
 
 namespace SpaceShooter.Game.Components.Enemy;
 
-public class EnemyViewModel : ImageGameObject, IRectCollider
+public class EnemyViewModel : ImageGameObject, ICollider
 {
     public override Type ViewType => typeof(EnemyView);
     public override string ImageName => "images/enemy.png";
@@ -66,8 +66,9 @@ public class EnemyViewModel : ImageGameObject, IRectCollider
 
     public void CollideWith(RenderGameObject renderGameObject)
     {
-        if (renderGameObject is PlayerViewModel)
+        if (renderGameObject is IColliderAgent)
         {
+            GameEnvironment.Instance.PlaySound("zap.ogg");
             _isColliderActive = false;
             _isDestroyed = true;
         }

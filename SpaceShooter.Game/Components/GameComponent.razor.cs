@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using SpaceShooter.Game.Components.Enemy;
 using SpaceShooter.Game.Components.Player;
+using SpaceShooter.Game.Components.Shoot;
 using SpaceShooter.Game.Models;
 using static SpaceShooter.Game.Collision.CollisionCheck;
 
@@ -23,18 +24,22 @@ namespace SpaceShooter.Game.Components
 
         protected bool _showCollider = false;
 
+        private PlayerViewModel? _currentPlayer;
+
         [Inject]
         public IJSRuntime? JSRuntime { get; set; }
 
         private void StopGame()
         {
             _isRunning = false;
+            JSRuntime!.InvokeAsync<object>("removeAudios");
         }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
             {
+                GameEnvironment.Instance.Init(JSRuntime!);
                 await JSRuntime!.InvokeAsync<object>("initRenderJS", DotNetObjectReference.Create(this));
                 await base.OnInitializedAsync();
             }
@@ -62,12 +67,15 @@ namespace SpaceShooter.Game.Components
         }
 
 
-        public async void StartGame()
+        public void StartGame()
         {
             _isRunning = true;
 
             _views.Clear();
-            _views.Add(new PlayerViewModel());
+            _currentPlayer = new PlayerViewModel();
+            _views.Add(_currentPlayer);
+
+            GameEnvironment.Instance.PlaySound("background.mp3", 1, true);
         }
 
         public void ToggleCollider()
@@ -76,9 +84,13 @@ namespace SpaceShooter.Game.Components
         }
 
         private DateTime _lastAddEnemy = DateTime.MinValue;
+        private DateTime _lastAddShot = DateTime.MinValue;
 
         private void Update()
         {
+            if (!_isRunning)
+                return;
+
             // cleanup dead game objects
             _views = _views.Where(v => !v.DestroyGameObject).ToList();
 
@@ -88,30 +100,45 @@ namespace SpaceShooter.Game.Components
                 _lastAddEnemy = DateTime.Now;
             }
 
-            var colliderObjects = _views.Where(v => v is IRectCollider rectCollider && rectCollider.IsColliderActive).Select(colliderGameObject =>
+            if (_currentPlayer != null && _lastAddShot.AddMilliseconds(400) < DateTime.Now)
             {
-                var colliderPolygon = (colliderGameObject as IRectCollider)!.ColliderPolygon;
-                colliderPolygon.BuildEdges();
+                _views.Insert(0, new ShotViewModel(_currentPlayer.Position.X + (_currentPlayer.Size.Width / 2), _currentPlayer.Position.Y));
+                _lastAddShot = DateTime.Now;
+            }
 
-                return (colliderGameObject, colliderPolygon);
-            });
-
-            foreach (var (colliderGameObject, colliderPolygon) in colliderObjects.Where(c => c.colliderGameObject is PlayerViewModel))
+            // calculate edges for collision detection
+            foreach (var currentView in _views)
             {
-                foreach (var item2 in colliderObjects)
+                if (currentView is not ICollider rectCollider || !rectCollider.IsColliderActive)
+                    continue;
+
+                rectCollider.ColliderPolygon.BuildEdges();
+            }
+
+            // check for collisions
+            foreach (var currentView in _views)
+            {
+                if (currentView is not IColliderAgent agent)
+                    continue;
+
+                foreach (var checkView in _views)
                 {
-                    if (colliderGameObject == item2.colliderGameObject)
+                    if (checkView is not ICollider rectCollider || !rectCollider.IsColliderActive)
                         continue;
 
-                    var collisionCheck = PolygonCollision(colliderPolygon, item2.colliderPolygon);
+                    if (checkView is IColliderAgent)
+                        continue;
+
+                    var collisionCheck = PolygonCollision(agent.ColliderPolygon, rectCollider.ColliderPolygon);
                     if (collisionCheck)
                     {
-                        (colliderGameObject as IRectCollider)!.CollideWith(item2.colliderGameObject);
-                        (item2.colliderGameObject as IRectCollider)!.CollideWith(colliderGameObject);
+                        agent.CollideWith(checkView);
+                        rectCollider.CollideWith((RenderGameObject)agent);
                     }
                 }
             }
 
+            // update game objects
             foreach (var item in _views)
             {
                 item.WindowSize.Width = _width;

@@ -3,7 +3,7 @@ using SpaceShooter.Game.Models;
 
 namespace SpaceShooter.Game.Components.Player;
 
-public class PlayerViewModel : ImageGameObject, IRectCollider
+public class PlayerViewModel : ImageGameObject, IColliderAgent
 {
     public override Type ViewType => typeof(PlayerView);
     public override string ImageName => "images/player.png";

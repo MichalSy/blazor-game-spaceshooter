@@ -7,7 +7,9 @@
 			{
 				@foreach (var currentView in _views)
 				{
-					@RenderWidget(currentView)
+					<svg>
+						@RenderWidget(currentView)
+					</svg>
 				}
 
 				<svg>
@@ -19,7 +21,7 @@
 				{
 					foreach (var currentView in _views)
 					{
-						if (currentView is IRectCollider coll && coll.IsColliderActive)
+						if (currentView is ICollider coll && coll.IsColliderActive)
 						{
 							<polygon points="@coll.ColliderPolygon.ToSvgString()" fill="none" stroke="yellow" stroke-width="2" />
 						}

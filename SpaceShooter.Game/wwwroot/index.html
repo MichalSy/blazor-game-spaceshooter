@@ -20,6 +20,8 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
+
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
     <script>
@@ -30,6 +32,32 @@
 
         function resizeCanvasToFitWindow() {
             theInstance.invokeMethodAsync('ResizeInBlazor', window.innerWidth, window.innerHeight);
+        }
+
+        function playsound(src, volume = 1, loop = false) {
+            let sound = document.createElement("audio");
+            sound.src = "sounds/" + src;
+            sound.setAttribute("preload", "auto");
+            sound.setAttribute("controls", "none");
+            sound.style.display = "none";
+            sound.volume = volume ?? 1;
+            sound.loop = loop;
+            document.body.appendChild(sound);
+
+            sound.onended = function () {
+                document.body.removeChild(sound);
+            };
+
+            sound.play();
+        }
+
+        function removeAudios() {
+            
+
+            document.querySelectorAll('audio')
+                .forEach((audio) => {
+                    document.body.removeChild(audio);
+                });
         }
 
         window.initRenderJS = (instance) => {
