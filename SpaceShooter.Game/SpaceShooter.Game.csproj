@@ -8,7 +8,6 @@
 		<AllowUnsafeBlocks>False</AllowUnsafeBlocks>
 		<InvariantGlobalization>true</InvariantGlobalization>
 		<RunAOTCompilation>true</RunAOTCompilation>
-		<StaticWebAssetBasePath>app</StaticWebAssetBasePath>
 	</PropertyGroup>
 
 	<ItemGroup>
