@@ -9,7 +9,7 @@
       "url": "_framework\/dotnet.timezones.blat"
     },
     {
-      "hash": "sha256-H27lHL3Qm3Cu8Xurg3wAvun23G33ASwN3GZRc9D1kmY=",
+      "hash": "sha256-t2EuWjZ1VSOH4HquaEZCj\/UoQ9i9HtkGTYsSXURTiL0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -17,11 +17,11 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
-      "hash": "sha256-Uj\/N5ah9RBuLniOF379uI7cTFdngTg3\/8O2WYyWlu\/o=",
+      "hash": "sha256-iCv5gh9t4GWtln26B9IGxelQARg3adlUQv6mLI2PADM=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
-      "hash": "sha256-Ph2ZOl\/LOY2cCUG\/S2iA61YUWIsDlcAHFxzdTG43rPw=",
+      "hash": "sha256-aj6roVJdOD9NQKYVxAzunXPw\/Mb7wa5ydPXmvrrArOc=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
@@ -37,7 +37,7 @@
       "url": "_framework\/Microsoft.Extensions.Configuration.Json.dll"
     },
     {
-      "hash": "sha256-TUY5bbWAOA8\/X7yHthheAb6QGUp7bjVyRjkFoXqQklE=",
+      "hash": "sha256-Olg+PtOdqF6qYn\/TDiKBh6nVXC9y5QVmNV85PcZtBf4=",
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
@@ -69,7 +69,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-fUVWi5cuRnG597drNCd3aivXEbTXimnHFbkP1nEuHJo=",
+      "hash": "sha256-0W4F9j74eMrl8cjKd2S13XV2Y5UihtHjuQZXxegh0oI=",
       "url": "_framework\/SpaceShooter.Game.dll"
     },
     {
@@ -93,19 +93,11 @@
       "url": "_framework\/System.Memory.dll"
     },
     {
-      "hash": "sha256-X5R1ZMINm7KHi9RboNhaNmxOcjoXr5hetE\/GMYOvjlw=",
-      "url": "_framework\/System.Net.Http.dll"
-    },
-    {
-      "hash": "sha256-OSU4N4XKqTKgdoO9pe\/BfZLehucijGO4k8igT7uzo\/A=",
-      "url": "_framework\/System.Net.Primitives.dll"
-    },
-    {
-      "hash": "sha256-rz0WB\/7QsITW\/mhAGEce9+Ue87I4sxAoey62QwA2YNY=",
+      "hash": "sha256-EagbvDNGYfTfbsd9A\/srfA44tuk+i+U5MUEGrAKdeJM=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-qi77gYVxMlCsbJi31oZqGaIW077cYdFy3LFk+dt2z6k=",
+      "hash": "sha256-1HIBMAyOxdhapOST1C62NVKaxZ4kyeh3DF+gofo1Rw8=",
       "url": "_framework\/System.Private.Runtime.InteropServices.JavaScript.dll"
     },
     {
@@ -117,7 +109,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-exhAxcdXYTKCAJEmpdZxXhK5MzSNhchObV4CMbhJMPM=",
+      "hash": "sha256-BfcORSUOmIvyDr2BuU7zKnPWJp61aA5NYeU3DFgT37k=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -129,11 +121,11 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-SS+um1z+E7C5eX0Clwt2s0c\/i7dt8nLzMcEp9+nTsKA=",
+      "hash": "sha256-o2LBmenklTZQUQMBUOK6fc7WkzOllpFfj06kiO6jQeU=",
       "url": "_framework\/dotnet.6.0.1.uc7qb4xcjb.js"
     },
     {
-      "hash": "sha256-IINl98cHtBFJmRbJ4ePi+01ziBxAqvoamOz\/xqAAo28=",
+      "hash": "sha256-nLu8UqLPvLbiSHyk1FTqJOct381CgThBXUlshCp\/1WA=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -141,7 +133,7 @@
       "url": "SpaceShooter.Game.styles.css"
     },
     {
-      "hash": "sha256-zOHiAvtFgILnmFe1skCPRYvIhgQza\/ijbWuVtD8BNP0=",
+      "hash": "sha256-pjdHyzCZvK6gjwDskuR6qqIoNXWFrOigcXi6XTxMFDQ=",
       "url": "css\/app.css"
     },
     {
@@ -169,7 +161,7 @@
       "url": "images\/player.png"
     },
     {
-      "hash": "sha256-epUwJThgjSQOI8smoqqylAHq9l6d3SnVgzIEfYqC7Eo=",
+      "hash": "sha256-o0koVZQOacZ68eRb+bqG6sI0fA8PLO4WA+YueMVQJyc=",
       "url": "index.html"
     },
     {
@@ -177,5 +169,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "yWPROf2w"
+  "version": "rSGhM16z"
 };
