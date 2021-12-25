@@ -9,7 +9,7 @@
       "url": "_framework\/dotnet.timezones.blat"
     },
     {
-      "hash": "sha256-qeoLPRoWwOCkEstu5lK1mlXXxgDN3+q8ggNFkRrssaE=",
+      "hash": "sha256-pN1yXZFM4oDLCcynvb12c11v4LVZ1t+b2uXwFRZgJts=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -69,7 +69,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-I748UWMrFxUOVIaqZIGg3oWfY5NSBXGmMOuLNn5fMIE=",
+      "hash": "sha256-k2pT\/nXxcOMyJ73Pg9sIcB\/vMvqrxoiR2d14vIhrs0k=",
       "url": "_framework\/SpaceShooter.Game.dll"
     },
     {
@@ -85,7 +85,7 @@
       "url": "_framework\/System.ComponentModel.dll"
     },
     {
-      "hash": "sha256-b698ikUWKAyfDR393wQhp7bpHwoMOg+PImUVmju5bV4=",
+      "hash": "sha256-d1sVPZnQ9AnxbPEHvLL3Y96fFG8x1VbTf9zMc4FDKTo=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -93,7 +93,7 @@
       "url": "_framework\/System.Memory.dll"
     },
     {
-      "hash": "sha256-ewhqW2K14ElZUwbOFhxKIccxBBr46M4Cz0Qh22C3mBc=",
+      "hash": "sha256-mR3khFDnbFTpmLVk\/uWX3u4ZUyyu30WmsLYhzEEOnFk=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -109,7 +109,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-mab99tsG1BDtO5vjNgO0FrXwlUr8XqJnKaxg451n924=",
+      "hash": "sha256-d4xImrXrZZxTj1Q9fRJiZTOR4+jsc3HY3AEFdHQPonE=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -121,11 +121,11 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-0hPPMXFcJqC+YX6HtrrAlQ1fNAnrlwjsS6EyrqYefPM=",
+      "hash": "sha256-YdyPsW2m0BOJMyxTmZxiIyS4MHPHdlpDmcBpfEBJgVI=",
       "url": "_framework\/dotnet.6.0.1.uc7qb4xcjb.js"
     },
     {
-      "hash": "sha256-0BjePezVQcvNod62nAN2N7mkKBuFvnSfRleUGHpc9t4=",
+      "hash": "sha256-QuKATLJbz7qccBs5RLQJc3TwlzqdSSf+kl7o2TqXIVw=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -161,13 +161,33 @@
       "url": "images\/player.png"
     },
     {
-      "hash": "sha256-wg4r8+0sEFs3BmuDJAlg7+52iUWk\/lVGo0GUwLICbYU=",
+      "hash": "sha256-fClf+zNS2untT9jIu9Q6gZA\/OSodP1mUwoltbcl0ZXU=",
+      "url": "images\/shot.png"
+    },
+    {
+      "hash": "sha256-FVr6QACJF3cRv02HxMS6+O\/YF\/uy3NdyhenNGMIePZ8=",
       "url": "index.html"
     },
     {
       "hash": "sha256-PHXm1lhI8AhMX4wEdOD78MglZ6\/sgxTDU5MUZXSKDT4=",
       "url": "manifest.json"
+    },
+    {
+      "hash": "sha256-k+SIm7JTdSXnXMvM4orBk4xaPllrto4+moxdnZu\/QZ0=",
+      "url": "sounds\/background.mp3"
+    },
+    {
+      "hash": "sha256-kQoK1jylFoW1QeKFVQxcwT\/wS+K0incxTQvxOLBE49Y=",
+      "url": "sounds\/laser.ogg"
+    },
+    {
+      "hash": "sha256-\/PIaYOiKPo3J0B+OOj1H8U+Ae71Qp4NyoiESykb3LJ0=",
+      "url": "sounds\/laser2.wav"
+    },
+    {
+      "hash": "sha256-h0X5xDqFLcWznpOTlXJCUqFciPJfsUYI6hwFZm\/6NXQ=",
+      "url": "sounds\/zap.ogg"
     }
   ],
-  "version": "XJ89zEva"
+  "version": "kNwOMA70"
 };
