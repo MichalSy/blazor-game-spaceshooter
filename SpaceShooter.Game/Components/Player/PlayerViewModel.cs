@@ -16,7 +16,7 @@ public class PlayerViewModel : ImageGameObject, IRectCollider
 
     public PlayerViewModel()
     {
-        Position = new(500, 500);
+        Position = new(-500, -500);
 
         _colliderPolygon.Points.Add(new Vector(45, 0));
         _colliderPolygon.Points.Add(new Vector(53, 0));
@@ -32,6 +32,11 @@ public class PlayerViewModel : ImageGameObject, IRectCollider
 
     public override void Update()
     {
+        if (Position.X < 0)
+        {
+            Position.X = (WindowSize.Width / 2) - (Size.Width / 2);
+            Position.Y = (WindowSize.Height - 100);
+        }
 
         Position.X = MousePosition.MouseX - (Size.Width / 2);
         Position.Y = MousePosition.MouseY - (Size.Height / 2);
