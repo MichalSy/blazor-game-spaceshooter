@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "Microsoft.AspNetCore.Components.dll": "sha256-pPx47g7aaYA7b7xtwzAZbVOzRfWWxwKCrKJckoAIYR4=",
-      "Microsoft.AspNetCore.Components.Web.dll": "sha256-iCv5gh9t4GWtln26B9IGxelQARg3adlUQv6mLI2PADM=",
+      "Microsoft.AspNetCore.Components.Web.dll": "sha256-U9LFEQm8tiCgera6d0pJw+dxp5C6GLf\/C1YeOdkE+tI=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-aj6roVJdOD9NQKYVxAzunXPw\/Mb7wa5ydPXmvrrArOc=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-zhFtW4kE16TdrpPne9I1Cu9o0KYzrS50VE9MVSifJg4=",
       "Microsoft.Extensions.Configuration.dll": "sha256-QPR+1IXNcA28b\/gXw3uZ8aRigHIZUJ1KWSH02kkCg7Q=",
@@ -21,7 +21,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-YColTWA58whC+8aBjv1O7HgsyYrbHTba601EkNDWAlo=",
       "Microsoft.JSInterop.dll": "sha256-Wbua5MP49m9CS7ZtolRGwwtHaoMrYOFYBZ4KphZ9C0w=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-vnE\/f0iqOlVKaRjTpLiArMb+lw6INqH0HhqcMh9FPe0=",
-      "SpaceShooter.Game.dll": "sha256-0W4F9j74eMrl8cjKd2S13XV2Y5UihtHjuQZXxegh0oI=",
+      "SpaceShooter.Game.dll": "sha256-2rI2AqeEFgIfn5NEsJT5Qa116tNbazuE0qVLwPJN1HI=",
       "System.Collections.Concurrent.dll": "sha256-LV8UQ7Pzz4bs9QfC23fcyM2QNR2oJHwgZnFBR3ArYOk=",
       "System.Collections.dll": "sha256-5r6nnTuSJuvxJxDk\/ltFUpV2E236T508tufQBx\/YWo0=",
       "System.ComponentModel.dll": "sha256-0wL1XbOGv224hyXbnGmWwnRc11am9UKqeKk+awaJjtY=",
@@ -42,7 +42,7 @@
     "runtime": {
       "dotnet.6.0.1.uc7qb4xcjb.js": "sha256-o2LBmenklTZQUQMBUOK6fc7WkzOllpFfj06kiO6jQeU=",
       "dotnet.timezones.blat": "sha256-2kYo2V\/aZ7htYEvY5PVJlrMYhFf1jH8\/VS+SP7B7QUg=",
-      "dotnet.wasm": "sha256-nLu8UqLPvLbiSHyk1FTqJOct381CgThBXUlshCp\/1WA="
+      "dotnet.wasm": "sha256-6K9EpMMYbt9gvoh0tYprks5YH3Qq\/0XAZDnrTNiCx1Y="
     },
     "satelliteResources": null
   }
