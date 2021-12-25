@@ -1,0 +1,6 @@
+﻿<image x="@Model.Position.X" y="@Model.Position.Y" width="@Model.Size.Width" height="@Model.Size.Height" href="@Model.ImageName" opacity="@Model.Opacity" />
+
+@code {
+	[Parameter]
+	public EnemyViewModel Model { get; set; } = new EnemyViewModel();
+}

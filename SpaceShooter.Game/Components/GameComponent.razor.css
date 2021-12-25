@@ -1,0 +1,20 @@
+﻿[game] {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+[game].active {
+	cursor: none;
+}
+
+[action-buttons] {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2rem;
+	text-align: center
+}

@@ -1,0 +1,38 @@
+﻿<div game class="@(_isRunning ? "active": string.Empty)">
+	<div x="0" y="0" width="@_width" height="@_height" style="background: url(images/background.png); background-repeat: repeat; display: inline-block">
+		<svg width="@_width" height="@_height" viewBox="0 0 @_width @_height" @onmousemove="MouseMove">
+
+			@if (_isRunning)
+			{
+				@foreach (var currentView in _views)
+				{
+					@RenderWidget(currentView)
+				}
+
+				<svg>
+					<text x="8" y="20" fill="red">FPS: @_fpsCount</text>
+					<text x="8" y="50" fill="red">Mouse: @_currentMousePosition</text>
+					<text x="8" y="80" fill="red">Collision: @_collisionTest</text>
+				</svg>
+
+				@if (_showCollider)
+				{
+					foreach (var currentView in _views)
+					{
+						if (currentView is IRectCollider coll && coll.IsColliderActive)
+						{
+							<polygon points="@coll.ColliderPolygon.ToSvgString()" fill="none" stroke="yellow" stroke-width="2" />
+						}
+					}
+				}
+			}
+
+		</svg>
+	</div>
+	<div action-buttons>
+		<button @onclick="StartGame" class="btn btn-primary">Start!</button>
+		<button @onclick="StopGame" class="btn btn-primary">Stop!</button>
+
+		<button @onclick="ToggleCollider" class="btn btn-primary">Toggle Display Collider</button>
+	</div>
+</div>

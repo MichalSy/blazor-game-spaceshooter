@@ -1,0 +1,6 @@
+﻿<image x="@Model.Position.X" y="@Model.Position.Y" width="@Model.Size.Width" height="@Model.Size.Height" href="@Model.ImageName" />
+
+@code {
+	[Parameter]
+	public PlayerViewModel Model { get; set; } = new PlayerViewModel();
+}
