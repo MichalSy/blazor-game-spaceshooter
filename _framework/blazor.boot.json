@@ -21,7 +21,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-YColTWA58whC+8aBjv1O7HgsyYrbHTba601EkNDWAlo=",
       "Microsoft.JSInterop.dll": "sha256-Wbua5MP49m9CS7ZtolRGwwtHaoMrYOFYBZ4KphZ9C0w=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-vnE\/f0iqOlVKaRjTpLiArMb+lw6INqH0HhqcMh9FPe0=",
-      "SpaceShooter.Game.dll": "sha256-2rI2AqeEFgIfn5NEsJT5Qa116tNbazuE0qVLwPJN1HI=",
+      "SpaceShooter.Game.dll": "sha256-S804G7f2gYgjoS51\/4YihnR9NEoVi28LWMz\/t8TQgPM=",
       "System.Collections.Concurrent.dll": "sha256-LV8UQ7Pzz4bs9QfC23fcyM2QNR2oJHwgZnFBR3ArYOk=",
       "System.Collections.dll": "sha256-5r6nnTuSJuvxJxDk\/ltFUpV2E236T508tufQBx\/YWo0=",
       "System.ComponentModel.dll": "sha256-0wL1XbOGv224hyXbnGmWwnRc11am9UKqeKk+awaJjtY=",
@@ -31,7 +31,7 @@
       "System.Private.Runtime.InteropServices.JavaScript.dll": "sha256-1HIBMAyOxdhapOST1C62NVKaxZ4kyeh3DF+gofo1Rw8=",
       "System.Private.Uri.dll": "sha256-LwHecQtBtNw8eIBpUBg03RXEXenbeHT18f0iFhb8M6M=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-NJPcPizDV6A4CjOnszxYro9mJMWaHq2cGM2\/A0bAFNY=",
-      "System.Runtime.dll": "sha256-BfcORSUOmIvyDr2BuU7zKnPWJp61aA5NYeU3DFgT37k=",
+      "System.Runtime.dll": "sha256-UVXnMlt6ZmDlsZWRddViS4fM2Am7WR0uTqGiBR+Fdno=",
       "System.Text.Encodings.Web.dll": "sha256-gUV2fOrOUGrNK6Oj1AxlN44sKTuN4hYA1DxX8xuRU2c=",
       "System.Text.Json.dll": "sha256-o8V6AMzk\/tG\/BtGfTY+OKKL8cS1JKUI48ABOY7wuyZY="
     },
@@ -40,9 +40,9 @@
     "libraryInitializers": null,
     "pdb": null,
     "runtime": {
-      "dotnet.6.0.1.uc7qb4xcjb.js": "sha256-o2LBmenklTZQUQMBUOK6fc7WkzOllpFfj06kiO6jQeU=",
+      "dotnet.6.0.1.uc7qb4xcjb.js": "sha256-RLUhVssT7uWMLqfvQ\/mwSkiRuMc9avMwxIQHcsDurEI=",
       "dotnet.timezones.blat": "sha256-2kYo2V\/aZ7htYEvY5PVJlrMYhFf1jH8\/VS+SP7B7QUg=",
-      "dotnet.wasm": "sha256-6K9EpMMYbt9gvoh0tYprks5YH3Qq\/0XAZDnrTNiCx1Y="
+      "dotnet.wasm": "sha256-mvym54fjHjMbJuii8YpABC5x+ZaSEhc8oHcDG2a7E04="
     },
     "satelliteResources": null
   }
