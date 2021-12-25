@@ -133,7 +133,7 @@
       "url": "SpaceShooter.Game.styles.css"
     },
     {
-      "hash": "sha256-pjdHyzCZvK6gjwDskuR6qqIoNXWFrOigcXi6XTxMFDQ=",
+      "hash": "sha256-NG\/wIdoh6BD4oHGg5YWiqJAKwlbawvUjcKSZuPHpWho=",
       "url": "css\/app.css"
     },
     {
@@ -169,5 +169,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "rSGhM16z"
+  "version": "yCZvUw5S"
 };
