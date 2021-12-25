@@ -1,0 +1,22 @@
+/* /Components/GameComponent.razor.rz.scp.css */
+[game][b-3kxumsmt4m] {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+[game].active[b-3kxumsmt4m] {
+	cursor: none;
+}
+
+[action-buttons][b-3kxumsmt4m] {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2rem;
+	text-align: center
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
