@@ -21,8 +21,6 @@ namespace SpaceShooter.Game.Components
 
         private IList<RenderGameObject> _views = new List<RenderGameObject>();
 
-        private string _collisionTest = string.Empty;
-
         protected bool _showCollider = false;
 
         [Inject]
@@ -94,7 +92,6 @@ namespace SpaceShooter.Game.Components
                 return (colliderGameObject, colliderPolygon);
             });
 
-            _collisionTest = "NO";
             foreach (var (colliderGameObject, colliderPolygon) in colliderObjects.Where(c => c.colliderGameObject is PlayerViewModel))
             {
                 foreach (var item2 in colliderObjects)
@@ -107,7 +104,6 @@ namespace SpaceShooter.Game.Components
                     {
                         (colliderGameObject as IRectCollider)!.CollideWith(item2.colliderGameObject);
                         (item2.colliderGameObject as IRectCollider)!.CollideWith(colliderGameObject);
-                        _collisionTest = "YES";
                     }
                 }
             }

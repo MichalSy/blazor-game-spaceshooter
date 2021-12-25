@@ -2,8 +2,31 @@ namespace SpaceShooter.Game.Collision;
 
 public class Polygon
 {
-    private List<Vector> _points = new();
+    #region Member - Edges
     private readonly List<Vector> _edges = new();
+    public List<Vector> Edges
+    {
+        get { return _edges; }
+    } 
+    #endregion
+
+    #region Member - Points
+    private List<Vector> _points = new();
+    public List<Vector> Points
+    {
+        get { return _points; }
+        set { _points = value; }
+    } 
+    #endregion
+
+    public void Offset(float x, float y)
+    {
+        foreach (var point in _points)
+        {
+            point.OffsetPositionX = x;
+            point.OffsetPositionY = y;
+        }
+    }
 
     public void BuildEdges()
     {
@@ -25,41 +48,5 @@ public class Polygon
         }
     }
 
-    public List<Vector> Edges
-    {
-        get { return _edges; }
-    }
-
-    public List<Vector> Points
-    {
-        get { return _points; }
-        set { _points = value; }
-    }
-
-
-
-    public void Offset(float x, float y)
-    {
-        for (int i = 0; i < _points.Count; i++)
-        {
-            Vector p = _points[i];
-            p.OffsetPositionX = x;
-            p.OffsetPositionY = y;
-            //_points[i] = new Vector(p.X + x, p.Y + y);
-        }
-    }
-
-    public string ToSvgString()
-    {
-        string result = "";
-
-        for (int i = 0; i < _points.Count; i++)
-        {
-            if (result != "") result += " ";
-            result += _points[i].ToString(true) + " ";
-        }
-
-        return result.TrimEnd();
-    }
-
+    public string ToSvgString() => string.Join(' ', _points);
 }

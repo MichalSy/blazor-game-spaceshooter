@@ -1,4 +1,6 @@
-﻿namespace SpaceShooter.Game.Collision;
+﻿using System.Collections.Generic;
+
+namespace SpaceShooter.Game.Collision;
 public class CollisionCheck
 {
 
@@ -60,19 +62,17 @@ public class CollisionCheck
         float d = axis.DotProduct(polygon.Points[0]);
         min = d;
         max = d;
-        for (int i = 0; i < polygon.Points.Count; i++)
+
+        foreach (var point in polygon.Points)
         {
-            d = polygon.Points[i].DotProduct(axis);
+            d = point.DotProduct(axis);
             if (d < min)
             {
                 min = d;
             }
-            else
+            else if (d > max)
             {
-                if (d > max)
-                {
-                    max = d;
-                }
+                max = d;
             }
         }
     }
