@@ -58,8 +58,10 @@ namespace SpaceShooter.Game.Components
         }
 
 
-        public void StartGame()
+        public async void StartGame()
         {
+            await JSRuntime!.InvokeAsync<object>("focusElement", "gamearea");
+
             _isRunning = true;
 
             _views.Clear();

@@ -1,6 +1,9 @@
 ﻿<div game class="@(_isRunning ? "active": string.Empty)">
 	<div x="0" y="0" width="@_width" height="@_height" style="background: url(images/background.png); background-repeat: repeat; display: inline-block">
-		<svg width="@_width" height="@_height" viewBox="0 0 @_width @_height" @onmousemove="MouseMove" @ontouchmove="TouchMove" @ontouchstart="TouchMove">
+		<svg id="gamearea" width="@_width" height="@_height" viewBox="0 0 @_width @_height" 
+			@onmousemove="MouseMove" 
+			@ontouchmove="TouchMove" 
+			@ontouchstart="TouchMove">
 
 			@if (_isRunning)
 			{

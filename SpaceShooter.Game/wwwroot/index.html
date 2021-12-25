@@ -32,6 +32,10 @@
             theInstance.invokeMethodAsync('ResizeInBlazor', window.innerWidth, window.innerHeight);
         }
 
+        function focusElement(elementName) {
+            document.getElementById(elementName).focus();
+        }
+
         window.initRenderJS = (instance) => {
             window.theInstance = instance;
             window.addEventListener("resize", resizeCanvasToFitWindow);
