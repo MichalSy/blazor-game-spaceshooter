@@ -5,6 +5,7 @@
 	top: 0;
 	bottom: 0;
 	overflow: hidden;
+	z-index: 0;
 }
 
 [game].active {
@@ -17,4 +18,18 @@
 	right: 0;
 	bottom: 2rem;
 	text-align: center
+}
+
+[start-label] {
+	color: white;
+	display: block;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	bottom: 30%;
+	height: 8rem;
+	text-align: center;
+	font-size: 4rem;
+	pointer-events: none;
 }

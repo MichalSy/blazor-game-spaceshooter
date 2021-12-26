@@ -1,7 +1,7 @@
 ﻿<div game class="@(_isRunning ? "active": string.Empty)">
 	<div style="background: url(images/background.png); background-repeat: repeat; display: inline-block">
-		<svg width="@_width" height="@_height" viewBox="0 0 @_width @_height" 
-			@onmousemove="MouseMove">
+		<svg width="@_width" height="@_height" viewBox="0 0 @_width @_height"
+			 @onmousemove="MouseMove" @onclick="PlayGame" @ontouchstart="PlayGame">
 
 			@if (_isRunning)
 			{
@@ -17,7 +17,6 @@
 
 				<svg>
 					<text x="8" y="20" fill="red">FPS: @_fpsCount</text>
-					<text x="8" y="50" fill="red">Mouse/Touch: @GameEnvironment.MousePosition</text>
 				</svg>
 
 				@if (_showCollider)
@@ -31,13 +30,11 @@
 					}
 				}
 			}
-
 		</svg>
 	</div>
-	<div action-buttons>
-		<button @onclick="StartGame" class="btn btn-primary">Start!</button>
-		<button @onclick="CleanupGame" class="btn btn-primary">Stop!</button>
 
-		<button @onclick="ToggleCollider" class="btn btn-primary">Toggle Display Collider</button>
-	</div>
+	@if (!_isRunning)
+	{
+		<span start-label>TOUCH TO START</span>
+	}
 </div>

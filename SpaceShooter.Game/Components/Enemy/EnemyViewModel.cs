@@ -41,7 +41,7 @@ public class EnemyViewModel : ImageGameObject, ICollider
         _colliderPolygon.Points.Add(new Vector(12, 40));
         _colliderPolygon.Offset((float)_posX, (float)_posY);
 
-        _speed = (_random.NextSingle() * 3) + 5;
+        _speed = (_random.NextSingle() * 3) + 3;
     }
 
     public override void Update(float time)

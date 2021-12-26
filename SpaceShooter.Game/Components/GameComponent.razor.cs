@@ -49,7 +49,7 @@ partial class GameComponent : ComponentBase
         StateHasChanged();
     }
 
-    [JSInvokable("TouchMoveInBlazor")]
+    [JSInvokable]
     public void TouchMoveInBlazor(double posX, double posY)
     {
         GameEnvironment.UpdateMouse(new Position(Math.Max((int)posX, 0), Math.Max((int)posY, 0)));
@@ -58,6 +58,30 @@ partial class GameComponent : ComponentBase
     private static void MouseMove(MouseEventArgs mouseEventArgs)
     {
         GameEnvironment.UpdateMouse(new(Math.Max((int)mouseEventArgs.OffsetX, 0), Math.Max((int)mouseEventArgs.OffsetY, 0)));
+    }
+
+    [JSInvokable]
+    public void KeyPressInBlazor(string keyName)
+    {
+        switch(keyName)
+        {
+            case "s":
+                CleanupGame();
+                StateHasChanged();
+                return;
+
+            case "c":
+                ToggleCollider();
+                return;
+        }
+    }
+
+    private void PlayGame()
+    {
+        if (!_isRunning)
+        {
+            StartGame();
+        }
     }
 
     public void ToggleCollider()
@@ -71,7 +95,6 @@ partial class GameComponent : ComponentBase
 
         _isRunning = true;
 
-        GameEnvironment.GameObjects.Clear();
         GameEnvironment.GameObjects.Add(new PlayerViewModel());
         GameEnvironment.GameObjects.Add(new EnemyManager());
         GameEnvironment.GameObjects.Add(new CollisionManager());
@@ -100,6 +123,7 @@ partial class GameComponent : ComponentBase
         _isRunning = false;
         GameEnvironment.UpdateMouse(new Position());
         GameEnvironment.RemoveAllSounds();
+        GameEnvironment.GameObjects.Clear();
     }
 
     private void UpdateGameFrame(float time)
