@@ -16,7 +16,7 @@ namespace SpaceShooter.Game.Components.Shoot
 
         public bool IsColliderActive => true;
 
-        private double _posX = 0;
+        private readonly double _posX = 0;
         private double _posY = 0;
 
 
@@ -24,17 +24,22 @@ namespace SpaceShooter.Game.Components.Shoot
         {
             _posX = spawnPositionX - (Size.Width / 2);
             _posY = spawnPositionY;
-
+            Position.X = (int)_posX;
+            Position.Y = (int)_posY;
+            
             _colliderPolygon.Points.Add(new Vector(0, 0));
             _colliderPolygon.Points.Add(new Vector(13, 0));
             _colliderPolygon.Points.Add(new Vector(13, 54));
             _colliderPolygon.Points.Add(new Vector(0, 54));
-            GameEnvironment.Instance.PlaySound("laser2.wav", 0.3f);
+            _colliderPolygon.Offset((float)_posX, (float)_posY);
+
+
+            GameEnvironment.PlaySound("laser2.wav", 0.3f);
         }
 
-        public override void Update()
+        public override void Update(float time)
         {
-            _posY -= 15;
+            _posY -= 20;
             _colliderPolygon.Offset((float)_posX, (float)_posY);
             Position.X = (int)_posX;
             Position.Y = (int)_posY;

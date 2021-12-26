@@ -1,5 +1,4 @@
 ﻿using SpaceShooter.Game.Collision;
-using SpaceShooter.Game.Components.Player;
 using SpaceShooter.Game.Models;
 
 namespace SpaceShooter.Game.Components.Enemy;
@@ -15,34 +14,41 @@ public class EnemyViewModel : ImageGameObject, ICollider
     public Polygon ColliderPolygon => _colliderPolygon;
 
     private bool _isColliderActive = true;
-    public bool IsColliderActive => _isColliderActive;
+    public bool IsColliderActive => _isColliderActive && _posX > -Size.Height;
 
-    private double _posX = -50;
-    private double _posY = -60;
+    private double _posX = 0;
+    private double _posY = 0;
 
     private bool _isDestroyed = false;
     public float Opacity { get; set; } = 1;
 
+    private float _speed;
+
+    private static Random _random = new();
+
     public EnemyViewModel()
     {
+        _posX = new Random().Next(50, GameEnvironment.WindowSize.Width - 100);
+        _posY = -Size.Height;
+        Position.X = (int)_posX;
+        Position.Y = (int)_posY;
+        
         _colliderPolygon.Points.Add(new Vector(0, 0));
         _colliderPolygon.Points.Add(new Vector(58, 0));
         _colliderPolygon.Points.Add(new Vector(47, 40));
         _colliderPolygon.Points.Add(new Vector(47, 68));
         _colliderPolygon.Points.Add(new Vector(12, 68));
         _colliderPolygon.Points.Add(new Vector(12, 40));
+        _colliderPolygon.Offset((float)_posX, (float)_posY);
+
+        _speed = (_random.NextSingle() * 3) + 5;
     }
 
-    public override void Update()
+    public override void Update(float time)
     {
-        if (_posX < 0)
-        {
-            _posX = new Random().Next(50, WindowSize.Width - 100);
-        }
-
         if (!_isDestroyed)
         {
-            _posY += 5;
+            _posY += _speed;
             _colliderPolygon.Offset((float)_posX, (float)_posY);
             Position.X = (int)_posX;
             Position.Y = (int)_posY;
@@ -58,7 +64,7 @@ public class EnemyViewModel : ImageGameObject, ICollider
             }
         }
 
-        if (_posY > WindowSize.Height + 10)
+        if (_posY > GameEnvironment.WindowSize.Height + 10)
         {
             DestroyGameObject = true;
         }
@@ -68,7 +74,7 @@ public class EnemyViewModel : ImageGameObject, ICollider
     {
         if (renderGameObject is IColliderAgent)
         {
-            GameEnvironment.Instance.PlaySound("zap.ogg");
+            GameEnvironment.PlaySound("zap.ogg");
             _isColliderActive = false;
             _isDestroyed = true;
         }
