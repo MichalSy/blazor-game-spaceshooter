@@ -25,12 +25,7 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
     <script>
-        function renderJS(timeStamp) {
-            theInstance.invokeMethodAsync('RenderInBlazor', timeStamp);
-            window.requestAnimationFrame(renderJS);
-        }
-
-        function resizeCanvasToFitWindow() {
+        function resizeToFitWindow() {
             theInstance.invokeMethodAsync('ResizeInBlazor', window.innerWidth, window.innerHeight);
         }
 
@@ -52,8 +47,6 @@
         }
 
         function removeAudios() {
-            
-
             document.querySelectorAll('audio')
                 .forEach((audio) => {
                     document.body.removeChild(audio);
@@ -62,7 +55,7 @@
 
         window.initRenderJS = (instance) => {
             window.theInstance = instance;
-            window.addEventListener("resize", resizeCanvasToFitWindow);
+            window.addEventListener("resize", resizeToFitWindow);
 
             window.addEventListener("touchstart", (event) => {
                 const onTouchMove = (event) => {
@@ -76,8 +69,7 @@
                 event.target.addEventListener("touchend", onTouchEnd);
             });
 
-            resizeCanvasToFitWindow();
-            window.requestAnimationFrame(renderJS);
+            resizeToFitWindow();
         };
     </script>
 </body>
