@@ -56,6 +56,9 @@
         window.initRenderJS = (instance) => {
             window.theInstance = instance;
             window.addEventListener("resize", resizeToFitWindow);
+            window.addEventListener("keypress", (e) => {
+                theInstance.invokeMethodAsync('KeyPressInBlazor', e.key);
+            });
 
             window.addEventListener("touchstart", (event) => {
                 const onTouchMove = (event) => {

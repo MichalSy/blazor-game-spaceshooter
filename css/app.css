@@ -1,5 +1,10 @@
-﻿html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+﻿@font-face {
+    font-family: "kenvector";
+    src: url('../fonts/kenvector_future_thin.ttf') format("truetype");
+}
+
+html, body {
+    font-family: 'kenvector';
 }
 
 body {

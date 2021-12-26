@@ -9,7 +9,7 @@
       "url": "_framework\/dotnet.timezones.blat"
     },
     {
-      "hash": "sha256-efgLYRZr91O6i\/+a74eCDSqJHlVzTET8kd4ljArQWfI=",
+      "hash": "sha256-5xURHNI0LKOtpGTC0uAha7J6C+zPYIN2+vHxsYNQ\/ds=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -69,7 +69,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-ek7ewpvRHeBImHb2bxcP1r6SQJniPP1Tilyk5QmXNDk=",
+      "hash": "sha256-iXI0AUuNITYu2XsGyYiqSu8T26r4g9S0KxziEeTJ7Wc=",
       "url": "_framework\/SpaceShooter.Game.dll"
     },
     {
@@ -117,24 +117,28 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-fTUuLVWj1s09qhR51GGxSd7xtA5StxFGt51ICdo6t1o=",
+      "hash": "sha256-Irhe7CUwZjOuxnCLmaxvbEgNTMP19fgmBbloAPkXxvo=",
       "url": "_framework\/dotnet.6.0.1.uc7qb4xcjb.js"
     },
     {
-      "hash": "sha256-nwn0t6SXF+YyChCgqD2uciytRuVrJt3HI0iXRMg\/y9s=",
+      "hash": "sha256-toPzcUdGzlI\/KudL08EaSxTqBrfMbWYrsPkSKHr7kts=",
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-r6KuDfxH3QDDyZ74nJK07s74k+qCIKzGQgD7IYkOgy0=",
+      "hash": "sha256-gklL1g9EaEq2DBwNRoARqEaoBHg8yu5FpEKgSB0mDhE=",
       "url": "SpaceShooter.Game.styles.css"
     },
     {
-      "hash": "sha256-NG\/wIdoh6BD4oHGg5YWiqJAKwlbawvUjcKSZuPHpWho=",
+      "hash": "sha256-YNAmE2LLmJBOgL1Mi5Ybt3gODVVU4IutSYzmaV7EwhA=",
       "url": "css\/app.css"
     },
     {
       "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
       "url": "favicon.ico"
+    },
+    {
+      "hash": "sha256-Xcu5G8PfSQ7xLLOE1XVMtG69c9FeXw1+jNRdV2MphRQ=",
+      "url": "fonts\/kenvector_future_thin.ttf"
     },
     {
       "hash": "sha256-DbpQaq68ZSb5IoPosBErM1QWBfsbTxpJqhU0REi6wP4=",
@@ -161,7 +165,7 @@
       "url": "images\/shot.png"
     },
     {
-      "hash": "sha256-8pnpCfksbERfYkI3sIWjO\/s2Mp2d+9DX2JI7x8BNvZ8=",
+      "hash": "sha256-oytcx7+6v7NH3Da0UmD7t8\/kHoWUOz6N\/uJ6sdr5\/gI=",
       "url": "index.html"
     },
     {
@@ -185,5 +189,5 @@
       "url": "sounds\/zap.ogg"
     }
   ],
-  "version": "X51QtCYI"
+  "version": "ZCK+8I3y"
 };
